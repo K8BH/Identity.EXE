@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+:root{
+
+    --olive: #86946F;
+    --cream:#f3efe9;
+    --beige:#e4dec8;
+    --gray: #ebebeb;
+    --ink:#181a16;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: none;
+}
+
+body{
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'IBM Plex Mono' monospace;
+    font-size: 13px;
+    padding: 2.5rem 1.5rem;
+}
+
+#cur{
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: var(--ink);
+    pointer-events: none;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+}
+
+#cur.hover{
+
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    border: 1px solid var(--ink);
+}
+
+.wrap {
+
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.75rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--ink);
+    font-weight: 600;
+}
+
+.themes{
+    display: flex;
+    gap: 0.4rem;
+}
+
+button{
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+    padding: 0.3rem 0.6rem ;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+button :hover{
+    background: var(--olive);
+    color: var(--cream);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+@media (max-width: 680px) {
+    .grid {grid-template-columns: 1fr;}
+    
+}
