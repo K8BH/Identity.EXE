@@ -91,11 +91,15 @@ button :hover{
 .card{
     border: 1px solid var(--ink);
     padding: 1.5rem;
-    background:var(--beige) ;
+ transition: all 0.2s ease;
+}
+
+.card.cream{
+    background: var(--beige);
     color: var(--ink);
 }
 
-.color.dark{
+.card.dark{
     background: var(--ink);
     color: var(--cream);
 }
