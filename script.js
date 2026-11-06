@@ -70,7 +70,7 @@ function makeQR() {
         height:54,
         colorDark: '#181a16',
         colorLight: '#f3Efe9',
-        correctLevel: QRcode.CorrectLevel.L
+        correctLevel: QRCode.CorrectLevel.L
     });
 }
 
@@ -90,4 +90,21 @@ function update (read = true) {
     document.getElementById('outBio').innerText = state.bio;
     document.getElementById('outGoal').innerText = state.goal;
     document.getElementById('outLink').innerText = state.link;
+
+
+    const box = document.getElementById('outTags');
+    box.innerHTML = '';
+    state.stack.split (',').map(s => s.trim()).filter(Boolean).forEach(s => {
+        const el = document.createElement('span');
+        el.className ='tag';
+        el.innerText = s;
+        box.appendChild(el);        
+    });
+
+    const h = hash(state.name + state.handle + state.stack);
+    const hashEl = document.getElementById('outHash');
+    if (hashEl) hashEl.innerText = '#' + h.toString(16).slice(0,6 );
+    drawPix(h);
+    makeQR();
+
 }
