@@ -106,5 +106,50 @@ function update (read = true) {
     if (hashEl) hashEl.innerText = '#' + h.toString(16).slice(0,6 );
     drawPix(h);
     makeQR();
+}
+
+function initForm() {
+    document.getElementById('inName').value = state.name;
+    document.getElementById('inHandle').value = state.handle;
+    document.getElementById('inBio').value = state.bio;
+    document.getElementById('inStack').value = state.stack;
+    document.getElementById('inGoal').value = state.goal;
+    document.getElementById('inLink').value = state.link;
+    setTheme(state.theme || 'cream');
+}
+
+function savePng() {
+    html2canvas(document.getElementById('card'), {scale: 2}).then(c => {
+        const a = document.createElement('a');
+        a.download = 'id.png';
+        a.href = c.toDataURL();
+        a.click();
+    });
+    
+}
+
+function copyURL(){
+    navigator.clipboard.writeText(shareURL());
+    const m = document.getElementById('msg');
+    m.innerText = 'copied';
+    setTimeout(() => m.innerText = '', 1500);
 
 }
+
+function resetAll(){
+    localStorage.removeItem(KEY);
+    location.hash = '';
+    state = { ...def };
+    initForm();
+    update(false)
+}
+
+if (location.hash.startsWith('#id=')) {
+    try {
+        state = JSON.parse(decodeURIComponent(atob(location.hash.slice(4))));
+
+    } catch (e) {}
+}
+
+initForm();
+update(false);
