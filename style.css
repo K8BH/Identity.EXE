@@ -88,3 +88,90 @@ button :hover{
     .grid {grid-template-columns: 1fr;}
     
 }
+.card{
+    border: 1px solid var(--ink);
+    padding: 1.5rem;
+    background:var(--beige) ;
+    color: var(--ink);
+}
+
+.color.dark{
+    background: var(--ink);
+    color: var(--cream);
+}
+
+.card.olive{
+    background: var(--olive);
+    color: var(--ink);
+}
+
+.c-head{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.c-name{
+    font-size: 16px;
+    font-weight: 550;
+}
+
+.c-sub{
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+#pix{
+    width: 44px;
+    height: 44px;
+    image-rendering: pixelated;
+    border: 1px solid currentColor;
+}
+
+.c-bio{
+    margin-bottom:1rem ;
+    line-height: 1.4;
+}
+
+.c-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.tag{
+    font-size: 11px;
+    border: 1px solid currentColor;
+    padding: 0.1rem 0.4rem ;
+}
+
+.c-foot{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid currentColor;
+    padding-top: 1rem ;
+    font-size: 11px ;
+    line-height: 1.6;
+}
+
+#qr{
+    background: var(--cream);
+    padding: 3PX;
+    border: 1px solid var(--ink);
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem ;
+    align-items: center;
+}
+
+#msg{
+    font-size: 11px;
+    opacity: 0.7;
+}
