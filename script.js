@@ -128,7 +128,7 @@ function savePng() {
     
 }
 
-function copyURL(){
+function copyUrl(){
     navigator.clipboard.writeText(shareURL());
     const m = document.getElementById('msg');
     m.innerText = 'copied';

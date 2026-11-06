@@ -19,7 +19,7 @@
 body{
     background: var(--cream);
     color: var(--ink);
-    font-family: 'IBM Plex Mono' monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 13px;
     padding: 2.5rem 1.5rem;
 }
