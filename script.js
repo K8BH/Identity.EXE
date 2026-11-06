@@ -14,7 +14,7 @@ const def = {
 let state = JSON.parse(localStorage.getItem(KEY)) || { ...def };
 
 const cur = document.getElementById('cur');
-window.addEventListener('movemouse', e => {
+window.addEventListener('mousemove', e => {
     cur.style.left = e.clientX + 'px';
     cur.style.top = e.clientY + 'px';
 
@@ -22,13 +22,13 @@ window.addEventListener('movemouse', e => {
 
 
 window.addEventListener('mouseover',e => {
-    cur.classList.togglr('hover',['BUTTON','INPUT'].includes(e.target.tagName));
+    cur.classList.toggle('hover',['BUTTON','INPUT'].includes(e.target.tagName));
 
 });
 
 function setTheme(t) {
     state.theme = t;
     const c = document.getElementById('card');
-    if (c) c.className = 'card' + t;
-    localStorage.setItem(KEY, JSOM.stringify(state));
+    if (c) c.className = 'card ' + t;
+    localStorage.setItem(KEY, JSON.stringify(state));
 }
