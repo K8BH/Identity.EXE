@@ -43,7 +43,28 @@
                     <input id="inLink" oninput="update()">
                 </div>
             </section>
-            <section id="cardbox"></section>
+            <section id="cardbox">
+                <div id="card" class="card cream">
+                    <div class="c-head">
+                        <div>
+                            <div id="outName" class="c-name"></div>
+                            <div id="outHandle" class="c-sub"></div>
+                        </div>
+                        <canvas id="pix" width="8" height="8"></canvas>
+                    </div>
+                    <p id="outBio" class="c-bio"></p>
+                    <div id="outTags" class="c-tags"></div>
+
+                    <div class="c-foot">
+                        <div class="c-meta">
+                            <div>next: <span id="outGoal"></span></div>
+                            <div>link: <span id="outLink"></span></div>
+                            <div id="outHash" class="c-sub"></div>
+                        </div>
+                        <div id="qr"></div>
+                    </div>
+                </div>
+            </section>
         </main>
     </div>
     <script src="script.js">
