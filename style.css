@@ -72,7 +72,7 @@ button{
     font-size: 12px;
 }
 
-button :hover{
+button:hover{
     background: var(--olive);
     color: var(--cream);
 }
