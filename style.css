@@ -21,7 +21,7 @@ body{
     color: var(--ink);
     font-family: 'IBM Plex Mono', monospace;
     font-size: 13px;
-    padding: 2.5rem 1.5rem;
+    padding: 2.6rem 1.6rem;
 }
 
 #cur{
@@ -79,8 +79,8 @@ button:hover{
 
 .grid{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
+    grid-template-columns: 1fr 1.618fr;
+    gap: 2.6rem;
     align-items: start;
 }
 
