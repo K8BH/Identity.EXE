@@ -17,7 +17,7 @@ window.addEventListener('mouseover', e => {
 drawStamp();
 
 imgInput.onchange = e => {
-    if (!e.target,files[0]) return;
+    if (!e.target.files[0]) return;
     const reader = new FileReader();
     reader.onload = ev => currentImg.src = ev.target.result;
     reader.readAsDataURL(e.target.files[0]);
@@ -40,6 +40,35 @@ function process() {
 
     const temp = document.createElement('canvas');
     temp.width = temp.height = size / px;
-    temp.getContext('2d').drawImage(currentImg, sx ,sy , min ,min , 0,0)
+    temp.getContext('2d').drawImage(currentImg, sx ,sy , min ,min , 0,0, size/px , size/px);
+
+    ctx.clearRect(0,0,size,size);
+    ctx.drawImage(temp,0,0,size/px,size/px,0,0,size,size);
+
+    drawStamp();
+}
+
+function drawStamp() {
+    const size = canvas.width;
+    ctx.fillStyle = '#181a16';
+    ctx.fillRect(0,size -40, size,40);
+
+    ctx.fillStyle = '#f3efe9';
+    ctx.font = '700 20px "IBM Plex Mono"';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.letterSpacing = '4px';
+    ctx.fillText('Embassy', size / 2,size - 20);
+
+}
+
+function downloadPfp() {
+    if (!hasImage) return;
+    const a  = document.createElement('a');
+    a.download = 'embassy_custom_pfp.png';
+    a.href = canvas.toDataURL('image/png');
+    a.click();
+
+
 }
 
