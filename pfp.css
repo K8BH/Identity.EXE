@@ -159,3 +159,43 @@ input[type="range"] {
     accent-color: var(--olive);
     cursor: none;
 }
+
+button{
+    background: transparent;
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    padding: 0.5rem 1rem ;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: 4px 4px 0 var(--olive);
+    transition: transform 0.1s, box-shadow 0.1;
+    margin-top: 1rem;
+    cursor: none;
+}
+
+button:hover{
+    background: var(--olive);
+    color: var(--cream);
+    border-color: var(--olive);
+
+}
+
+button:active{
+    transform: translate(2px,2px);
+    box-shadow: 2px 2px 0 var(--olive);
+
+}
+
+#pfpCanvas {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1/1;
+    image-rendering: pixelated;
+    border: 2px solid var(--ink);
+    box-shadow: 8px 8px 0 var(--ink);
+    background: var(--beige);
+    display: block;
+    margin: 0 auto;
+    
+}
