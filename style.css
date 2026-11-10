@@ -2,12 +2,12 @@
 
 :root{
 
-    --olive: #ff6f59;
-    --cream:#f4f1de;
-    --beige:#81b29a;
+    --olive: #a95c72;
+    --cream:#f2e3e5;
+    --beige:#dfb2b8;
     --gray: #e0e1dd;
-    --ink:#181923;
-    --ink-soft: #7e82a326;
+    --ink:#841842;
+    --ink-soft: rgba (132, 24, 66, 0.15);
 }
 
 *{
@@ -67,7 +67,7 @@ body{
 }
 
 button{
-    background: transparent;
+    background: var(--ink-soft);
     color: var(--ink);
     border: 1px solid var(--ink);
     padding: 0.3rem 0.6rem ;
