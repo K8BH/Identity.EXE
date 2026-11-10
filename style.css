@@ -6,7 +6,8 @@
     --cream:#f4f1de;
     --beige:#81b29a;
     --gray: #e0e1dd;
-    --ink:#3d405b;
+    --ink:#181923;
+    --ink-soft: #7e82a326;
 }
 
 *{
@@ -22,6 +23,8 @@ body{
     font-family: 'IBM Plex Mono', monospace;
     font-size: 13px;
     padding: 2.6rem 1.6rem;
+    line-height: 1.6;
+    
 }
 
 #cur{
@@ -54,7 +57,7 @@ body{
     align-items: center;
     padding-bottom: 0.75rem;
     margin-bottom: 2rem;
-    border-bottom: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink)--ink-soft;
     font-weight: 600;
 }
 
@@ -89,7 +92,8 @@ button:hover{
     
 }
 .card{
-    border: 1px solid var(--ink);
+    border: 1px solid var(--ink-soft);
+    border-radius: 8px;
     padding: 1.5rem;
  transition: all 0.2s ease;
 }
@@ -156,7 +160,7 @@ button:hover{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    border-top: 1px solid currentColor;
+    border-top: 1px solid var(--ink-soft);
     padding-top: 1rem ;
     font-size: 11px ;
     line-height: 1.6;
@@ -212,7 +216,7 @@ input{
     color: var(--ink);
     transition: border-bottom-color 0.2s ease;
     border-radius: 0;
-    -webkit-appearance: none;
+    appearance: none;
 }
 
 input:focus{
