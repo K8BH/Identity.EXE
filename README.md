@@ -11,7 +11,7 @@ Instead of just saving text to a database, this engine instantly binds your data
 
 ## // Main Highlight!- PFP.EXE
 
-This is the Main Highlight of my Website **pfp.exe Embassy Pixalator**. Upload any image, tweak the custom pixelation slider, drop some retro stamps, and genrate a matching pixel-art avatar right from the navbar.
+This is the Main Highlight of my Website **pfp.exe Embassy Pixalator**. Upload any image, tweak the custom pixelation slider, drop some retro stamps, and genrate a matching pixel-art avatar.
 
 ![alt text](image-1.png)
 

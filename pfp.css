@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap');
 
 :root{
-    --olive: #86946f;
-    --cream:#f3efe9 ;
-    --beige: #e4dec8;
-    --ink:#181a16;
+    --olive: #c78c96;
+    --cream:#f5e6e8 ;
+    --beige:#e3c6ca;
+    --ink:#6a2b36;
 }
 
 *{
