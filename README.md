@@ -15,7 +15,7 @@ This is the Main Highlight of my Website **pfp.exe Embassy Pixalator**. Upload a
 
 ![alt text](image-1.png)
 
-![alt text] (image.png)
+![alt text](image-2.png)
 
 
 
