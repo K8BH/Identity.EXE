@@ -17,6 +17,25 @@ This is the Main Highlight of my Website **pfp.exe Embassy Pixalator**. Upload a
 
 ![alt text](image-2.png)
 
+## // How to Run The STuff i Made 
+
+it has zero dependencies. and it has lightweight code so u dont need a Rtx 5090 to run
+
+1. Clone or Download This Repo.
+
+2. Start a Local server (e.g. 'python -m http.server') to allow the Canvas PNG export to WORK.
+
+3. Open 'index.html' on a laptop.
+
+4. Upload an avatar, tweak the sliders, and generate your footprint or make a identity card of urself and use it in ur portfolio
 
 
+## // Tech Stacks & what stuff i learned 
+
+
+* HTML & CSS: **I used minimal design and made the colour theme pink on landing page**
+
+* Vanila JS: **It is the Main part of my Project It makes the id card generator work and makes the pfp pixelator work**
+
+Building this solified my base in Vanila Javascript (tbh i kinda felt bored doing this but this was the most important part of my project). Figuring out how client-side file uploads work without a backend and rendering DOM elements into downlodable PNGs was tricky but awesome.
 
