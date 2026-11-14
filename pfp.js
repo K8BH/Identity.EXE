@@ -72,3 +72,47 @@ function downloadPfp() {
 
 }
 
+const speed = 1.2;
+
+const allStickers = document.querySelectorAll('.sticker, .img-sticker');
+
+
+const stickerPhysics = Array.from(allStickers).map(sticker => {
+    return{
+        Element: sticker,
+        x: Math.random() * (window.innerWidth - 100),
+        y: Math.random() * (window.innerHeight - 100),
+        vx: (Math.random() > 0.5 ? 1 : -1 ) * speed,
+        vy: (Math.random() > 0.5 ? 1 : -1) * speed,
+
+    };
+});
+
+function bounceStickers() {
+    stickerPhysics.forEach(sticker => {
+        const Rect = sticker.Element.getBoundingClientRect();
+
+        sticker.x += sticker.vx;
+        sticker.y += sticker.vy;
+
+        if (sticker.x <= 0 || sticker.x + Rect.width >= window.innerWidth) {
+            sticker.vx *= -1;
+
+            sticker.x = sticker.x <= 0 ? 0 : window.innerWidth - Rect.width;
+        }
+
+        if (sticker.y <= 0 || sticker.y + Rect.height >= window.innerHeight) {
+            sticker.vy *= -1;
+            sticker.y = sticker.y <= 0 ? 0 : window.innerHeight - Rect.height;
+
+        }
+
+        sticker.Element.style.transform = `translate(${sticker.x}px, ${sticker.y}px)`;
+    });
+    requestAnimationFrame(bounceStickers);
+
+}
+
+if (allStickers.length > 0) {
+    bounceStickers();
+}
