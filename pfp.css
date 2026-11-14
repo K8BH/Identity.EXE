@@ -7,7 +7,7 @@
     --ink:#181a16;
 }
 
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -136,7 +136,7 @@ input[type="file"]{
     font-size: 12px;
 }
 
-inpu[type="file"]::file-selector-button{
+input[type="file"]::file-selector-button{
     background: var(--ink);
     color: var(--cream);
     border: none;
@@ -169,7 +169,7 @@ button{
     font-size: 12px;
     font-weight: 700;
     box-shadow: 4px 4px 0 var(--olive);
-    transition: transform 0.1s, box-shadow 0.1;
+    transition: transform 0.1s, box-shadow 0.1s;
     margin-top: 1rem;
     cursor: none;
 }
